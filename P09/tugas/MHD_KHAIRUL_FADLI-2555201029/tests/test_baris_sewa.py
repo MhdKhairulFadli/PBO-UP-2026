@@ -1,8 +1,7 @@
-
+﻿
 """Pengujian untuk kelas BarisSewa."""
 
 import pytest
-
 from src.model.alat_tani import AlatTani
 from src.model.baris_sewa import BarisSewa
 
@@ -10,7 +9,7 @@ from src.model.baris_sewa import BarisSewa
 class AlatUji(AlatTani):
     """Alat konkret khusus untuk pengujian BarisSewa."""
 
-    def biaya_tambahan(self, jumlah_hari: int) -> int:
+    def biaya_tambahan(self, _jumlah_hari: int) -> int:
         """Menghitung biaya tambahan."""
         return 0
 
@@ -79,3 +78,4 @@ def test_subtotal_tidak_berubah_setelah_tarif_alat_berubah() -> None:
 
     assert baris.subtotal() == 450_000
     assert baris.tarif_saat_sewa == 150_000
+

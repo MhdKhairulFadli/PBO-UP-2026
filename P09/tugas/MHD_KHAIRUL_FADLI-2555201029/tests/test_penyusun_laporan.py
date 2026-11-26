@@ -1,7 +1,6 @@
 ﻿"""Pengujian penyusun laporan penghasilan pegawai."""
 
 import pytest
-
 from src.model.pegawai import Pegawai
 from src.model.pegawai_lapangan import PegawaiLapangan
 from src.model.pegawai_penyuluh import PegawaiPenyuluh

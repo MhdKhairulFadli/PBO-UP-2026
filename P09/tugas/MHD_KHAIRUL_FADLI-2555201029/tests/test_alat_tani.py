@@ -1,10 +1,9 @@
-
+﻿
 """Pengujian untuk kelas abstrak AlatTani dan turunannya."""
 
 import dataclasses
 
 import pytest
-
 from src.model.alamat import Alamat
 from src.model.alat_tani import AlatTani
 from src.model.perontok import Perontok
@@ -15,7 +14,7 @@ from src.model.traktor import Traktor
 class AlatUji(AlatTani):
     """Implementasi konkret AlatTani khusus untuk pengujian."""
 
-    def biaya_tambahan(self, jumlah_hari: int) -> int:
+    def biaya_tambahan(self, _jumlah_hari: int) -> int:
         """Menghitung biaya tambahan."""
         return 0
 
@@ -226,3 +225,4 @@ def test_perontok_dari_baris_csv() -> None:
 def test_perontok_csv_format_salah_ditolak() -> None:
     with pytest.raises(ValueError):
         Perontok.dari_baris_csv("PR-70;Mesin Perontok")
+

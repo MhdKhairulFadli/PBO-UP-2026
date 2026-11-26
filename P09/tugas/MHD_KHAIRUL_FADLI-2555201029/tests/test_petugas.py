@@ -3,7 +3,6 @@
 import dataclasses
 
 import pytest
-
 from src.model.petugas import PeriodeTugas, Petugas
 
 

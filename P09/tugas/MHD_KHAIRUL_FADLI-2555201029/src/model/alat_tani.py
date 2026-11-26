@@ -11,6 +11,7 @@ class AlatTani(ABC):
     """Kelas abstrak untuk seluruh alat pertanian."""
 
     PEMISAH_BARIS: Final[str] = ";"
+    JUMLAH_KOLOM_CSV: Final[int] = 3
     JUMLAH_TERDAFTAR: ClassVar[int] = 0
 
     def __init__(
@@ -59,7 +60,7 @@ class AlatTani(ABC):
         """Membuat objek AlatTani dari baris CSV sederhana."""
         bagian = baris.strip().split(cls.PEMISAH_BARIS)
 
-        if len(bagian) != 3:
+        if len(bagian) != cls.JUMLAH_KOLOM_CSV:
             raise ValueError("format CSV alat tidak valid")
 
         try:

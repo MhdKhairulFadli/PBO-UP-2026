@@ -1,8 +1,7 @@
-
+﻿
 """Pengujian untuk kelas Sewa dan StatusSewa."""
 
 import pytest
-
 from src.model.alamat import Alamat
 from src.model.alat_tani import AlatTani
 from src.model.baris_sewa import BarisSewa
@@ -13,7 +12,7 @@ from src.model.sewa import Sewa, StatusSewa
 class AlatUji(AlatTani):
     """Alat konkret khusus untuk pengujian transaksi."""
 
-    def biaya_tambahan(self, jumlah_hari: int) -> int:
+    def biaya_tambahan(self, _jumlah_hari: int) -> int:
         """Menghitung biaya tambahan."""
         return 0
 
@@ -265,3 +264,4 @@ def test_sewa_batal_menolak_penambahan_alat() -> None:
 def test_enum_menolak_status_tidak_dikenal() -> None:
     with pytest.raises(ValueError):
         StatusSewa("seleai")
+

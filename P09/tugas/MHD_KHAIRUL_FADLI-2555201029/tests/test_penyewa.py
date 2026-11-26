@@ -1,7 +1,6 @@
 """Pengujian untuk kelas Penyewa dan Alamat."""
 
 import pytest
-
 from src.model.alamat import Alamat
 from src.model.penyewa import Penyewa
 

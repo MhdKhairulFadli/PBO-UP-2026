@@ -2,7 +2,6 @@
 """Pengujian hierarki Pegawai untuk Tugas 2 P06."""
 
 import pytest
-
 from src.model.pegawai import Pegawai
 from src.model.pegawai_lapangan import PegawaiLapangan
 from src.model.pegawai_penyuluh import PegawaiPenyuluh

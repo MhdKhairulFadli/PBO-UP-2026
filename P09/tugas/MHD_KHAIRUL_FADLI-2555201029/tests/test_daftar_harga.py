@@ -1,8 +1,7 @@
-
+﻿
 """Pengujian polimorfisme pada DaftarHarga."""
 
 import pytest
-
 from src.model.alat_tani import AlatTani
 from src.model.daftar_harga import DaftarHarga
 from src.model.gerobak_dorong import GerobakDorong
@@ -15,7 +14,7 @@ from src.model.traktor import Traktor
 class AlatUji(AlatTani):
     """Alat konkret khusus untuk pengujian."""
 
-    def biaya_tambahan(self, jumlah_hari: int) -> int:
+    def biaya_tambahan(self, _jumlah_hari: int) -> int:
         """Menghitung biaya tambahan."""
         return 0
 
@@ -87,7 +86,7 @@ def test_daftar_harga_menerima_subkelas_baru() -> None:
     class Penggiling(AlatTani):
         """Alat penggiling dengan ongkos angkut."""
 
-        def biaya_tambahan(self, jumlah_hari: int) -> int:
+        def biaya_tambahan(self, _jumlah_hari: int) -> int:
             return 0
 
         def syarat_pemakaian(self) -> str:
@@ -121,3 +120,4 @@ def test_daftar_harga_menerima_gerobak_dorong() -> None:
 
     assert daftar.biaya_semua(3) == [150_000]
     assert daftar.termurah(3).kode == "GD-01"
+

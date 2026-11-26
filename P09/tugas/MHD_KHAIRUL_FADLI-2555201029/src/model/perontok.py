@@ -49,10 +49,11 @@ class Perontok(AlatTani):
             raise ValueError("jumlah hari sewa harus lebih dari nol")
         return max(jumlah_hari, self.MINIMUM_HARI_SEWA)
 
-    def biaya_tambahan(self, jumlah_hari: int) -> int:
+    def biaya_tambahan(self, _jumlah_hari: int) -> int:
         """Perontok tidak memiliki biaya tambahan."""
         return 0
 
     def syarat_pemakaian(self) -> str:
         """Mengembalikan syarat penggunaan perontok."""
         return "Minimal penyewaan dua hari."
+
